@@ -46,7 +46,7 @@ const App = () => {
       <label htmlFor="enc">Decrypt</label>
       <input type="radio" name="enc" value="decrypt" onChange={handleRadio} checked={option === "decrypt"} />
       <h1>Output</h1>
-      <input type="text" disabled className="border-black border-2 outline-none" />
+      <input type="text" disabled placeholder="check console 😒" className="border-black border-2 outline-none" />
 
       <button onClick={handleOutput}>find</button>
     </main>
