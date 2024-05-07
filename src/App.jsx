@@ -33,13 +33,13 @@ const App = () => {
   }
 
   return (
-    <main className="p-5 grid content-center h-screen">
+    <main className="p-5 grid content-center h-screen md:px-[15rem] bg-sky-100">
       <h1>Text to be encrypted/decrypted</h1>
-      <input type="text" className="border-black border-2 outline-none px-2 h-12 rounded-xl my-2" onChange={handleInput} />
+      <input type="text" className="outline-none px-2 h-12 rounded-xl my-2" onChange={handleInput} />
       <h1>Password</h1>
-      <input type="password" className="border-black border-2 outline-none px-2 h-12 rounded-xl my-2" onChange={handlePassword} />
+      <input type="password" className="outline-none px-2 h-12 rounded-xl my-2" onChange={handlePassword} />
       <br />
-      <div className="flex gap-5 items-center my-5">
+      <div className="flex gap-5 items-center mt-5 mb-10">
         <label htmlFor="enc">Encrypt</label>
         <input type="radio" name="enc" value="encrypt" onChange={handleRadio} checked={option === "encrypt"} />
 
@@ -48,7 +48,7 @@ const App = () => {
       </div>
       <h1>Output</h1>
 
-      <input type="text" disabled placeholder="Your output will be displayed here" value={value} className="border-black border-2 outline-none px-2 h-12 rounded-xl my-2" />
+      <input type="text" disabled placeholder="Your output will be displayed here" value={value} className="outline-none px-2 h-12 rounded-xl my-2 bg-white" />
 
       <button className="bg-red-500 h-12 rounded-full font-semibold text-white my-5" onClick={handleOutput}>Output</button>
     </main>
